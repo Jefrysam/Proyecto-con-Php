@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Ficticio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Restaurante de Luis Anibal</h1>
+        <nav>
+            <a href="#quienes-somos">Quiénes Somos</a>
+            <a href="#menu">Menú</a>
+            <a href="#contacto">Contáctanos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="quienes-somos">
+            <h2>Quiénes Somos</h2>
+            <div class="contenido-seccion">
+                <div class="texto">
+                    <p>Somos una empresa ficticia nacida de un proyecto de desarrollo web. Nuestro fundador, <strong>Luis Anibal</strong>, se valió de su ingenio y pasión por la comida para poder pasar la materia y, de paso, crear este increíble concepto culinario.</p>
+                    <p>Aquí encontrarás los sabores más auténticos y una experiencia inolvidable.</p>
+                </div>
+                <div class="imagen">
+                    <!-- Coloca aquí la foto del restaurante o del dueño -->
+                    <img src="fotos/restaurante.jpg" alt="Foto del restaurante">
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2>Nuestro Menú</h2>
+            <div class="menu-container">
+                <!-- Tarjeta de Menú 1 -->
+                <div class="menu-card">
+                    <!-- Coloca aquí la imagen de la salchipapa -->
+                    <img src="fotos/salchipapa.jpg" alt="Salchipapa">
+                    <h3>Salchipapa con gaseosa</h3>
+                    <p>Precio: COP 7,000</p>
+                </div>
+                <!-- Tarjeta de Menú 2 -->
+                <div class="menu-card">
+                    <!-- Coloca aquí la imagen de la hamburguesa -->
+                    <img src="fotos/hamburguesa.jpg" alt="Amburguesa de pescado">
+                    <h3>Hamburguesa de pescado y jugo</h3>
+                    <p>Precio: COP 12,000</p>
+                </div>
+                <!-- Tarjeta de Menú 3 -->
+                <div class="menu-card">
+                    <!-- Coloca aquí la imagen de los hongos -->
+                    <img src="fotos/hongos.jpg" alt="Hongos Patuano">
+                    <h3>Hongos Patuanos y leche de mipalo</h3>
+                    <p>Precio: COP 14,000</p>
+                </div>
+                <!-- Tarjeta de Menú 4 (Editable) -->
+                <div class="menu-card">
+                     <!-- Coloca aquí otra imagen -->
+                    <img src="fotos/default.jpg" alt="Plato personalizable">
+                    <h3>Inserte texto</h3>
+                    <p>Precio: COP 0.00</p>
+                </div>
+            </div>
+
+            <div class="pedido-form">
+                <h3>Realiza tu Pedido</h3>
+                <form action="procesar_pedido.php" method="POST">
+                    <h4>Tus Datos</h4>
+                    <input type="text" name="nombre_completo" placeholder="Nombre Completo" required>
+                    <select name="tipo_documento" required>
+                        <option value="CC">Cédula de Ciudadanía</option>
+                        <option value="CE">Cédula de Extranjería</option>
+                        <option value="TI">Tarjeta de Identidad</option>
+                    </select>
+                    <input type="text" name="numero_documento" placeholder="Número de Documento" required>
+                    <input type="text" name="celular" placeholder="Celular" required>
+                    <input type="email" name="correo" placeholder="Correo Electrónico" required>
+
+                    <h4>Tu Pedido</h4>
+                    <select name="menu" required>
+                        <option value="Salchipapa con gaseosa">Salchipapa con gaseosa - 7000</option>
+                        <option value="Amburguesa de pescado y jugo natural">Hamburguesa de pescado y jugo - 12000</option>
+                        <option value="Hongos Patuano y leche de mipalo">Hongos Patuanos - 14000</option>
+                        <option value="Otro">Otro (especificar en notas)</option>
+                    </select>
+                    
+                    <label>Modalidad:</label>
+                    <input type="radio" name="modalidad" value="llevar" id="llevar" checked> Para llevar
+                    <input type="radio" name="modalidad" value="restaurante" id="restaurante"> Para comer en restaurante
+                    
+                    <div id="campo-mesa" style="display: none;">
+                        <input type="text" name="mesa" placeholder="Número de Mesa">
+                    </div>
+
+                    <button type="submit">Enviar Pedido</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Tu Nombre">
+                <input type="email" placeholder="Tu Correo">
+                <textarea placeholder="Tu Mensaje"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Restaurante de Luis Anibal. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

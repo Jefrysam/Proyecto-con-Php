@@ -9,7 +9,7 @@
 <body>
 
     <header>
-        <h1>Restaurante de Luis Anibal</h1>
+        <h1>Restaurante de LIAM</h1>
         <nav>
             <a href="#quienes-somos">Quiénes Somos</a>
             <a href="#menu">Menú</a>
